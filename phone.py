@@ -34,12 +34,34 @@ class Iphone(Phone):
 martin_iphone = Iphone(5551112222)
 print('martin\'s number is {}'.format(martin_iphone.number))
 
-martin_iphone.set_fingerprint('password')
-print(martin_iphone.fingerprint)
+# martin_iphone.set_fingerprint('password')
+# print(martin_iphone.fingerprint)
+# martin_iphone.unlock('password123')
+# # here we use the call method inherited from Phone parent class
+# martin_iphone.call(2224449999)
+# martin_iphone.open_app('tik tok')
 
-martin_iphone.unlock('password123')
 
-# here we use the call method inherited from Phone parent class
-martin_iphone.call(2224449999)
+class Android(Phone):
+  # initialize an instance of Android class
+  def __init__(self, phone_number):
+    # inherit from Phone parent class to access its methods
+    # we pass in phone number because parent Phone class needs access 
+    super().__init__(phone_number)
+    self.keyboard = 'Default'
 
-martin_iphone.open_app('tik tok')
+  # string representation of an object
+  def __str__(self):
+    return 'this phone is owned by {}'.format(self.number)
+
+  def set_keyboard(self, new_keyboard):
+    self.keyboard = new_keyboard
+
+Android.ORIGIN = Android('')
+
+josh_phone = Android(5557130000)
+josh_phone.set_keyboard('Dvorak')
+josh_phone.call(8298111141)
+
+josh_phone.open_app('google play store')
+print(josh_phone)
