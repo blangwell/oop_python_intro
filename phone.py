@@ -33,3 +33,13 @@ class Iphone(Phone):
 
 martin_iphone = Iphone(5551112222)
 print('martin\'s number is {}'.format(martin_iphone.number))
+
+martin_iphone.set_fingerprint('password')
+print(martin_iphone.fingerprint)
+
+martin_iphone.unlock('password123')
+
+# here we use the call method inherited from Phone parent class
+martin_iphone.call(2224449999)
+
+martin_iphone.open_app('tik tok')
