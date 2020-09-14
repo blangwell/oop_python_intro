@@ -5,6 +5,8 @@ class MartialArts():
     self.score = 0
     self.blurb = ''
 
+  # whenever we use self, we are referring to something that is
+  # inherent in the class instance, when self is missing, we are using parameters
   def add_score(self, user_score):
     self.score += user_score
     print(f'Your score for {self.name} is {user_score} / 10')
