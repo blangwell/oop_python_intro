@@ -18,13 +18,15 @@ class VideoGame():
 
   def add_blurb(self, blurb):
     self.blurb = blurb
-    print('here is your blurb about :{} \n{}'.format(self.title, blurb))
+    print('here is your blurb about {}: \n{}'.format(self.title, blurb))
   
 
 sekiro = VideoGame('sekiro', 'M', '2019')
 
-sekiro.score_game(9)
-sekiro.show_rating()
-sekiro.show_year()
+# sekiro.score_game(9)
+# sekiro.show_rating()
+# sekiro.show_year()
+# sekiro.add_blurb('this game is super fun i say!')
 
-sekiro.add_blurb('this game is super fun i say!')
+dark_souls_3 = VideoGame('Dark Souls 3', 'M', '2016')
+dark_souls_3.add_blurb('super fun stuff. have a panic attack! ')
