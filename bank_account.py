@@ -60,4 +60,4 @@ print('my current balance is ${}.'.format(barent_checking.balance))
 barent_checking.withdraw(2000, 1234)
 print('my overdraft fee is currently ${}'.format(barent_checking.overdraft_fees))
 
-# barent_checking.change_pin(5678)
+barent_checking.change_pin(5678)
